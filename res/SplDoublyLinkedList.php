@@ -37,10 +37,10 @@ $dlist->rewind();//重置指针
  * 设置迭代器
  */
 p($dlist->getIteratorMode());
-$dlist->setIteratorMode(3);
+$dlist->setIteratorMode(SplDoublyLinkedList::IT_MODE_FIFO);
 
 /*
- * 根据偏移量操作列表
+ * 根据偏移量操作列表,继承自ArrayAccess
  */
 p($dlist->offsetExists(3));//检测偏移量是否存在
 $dlist->offsetSet(2, 'j');//根据偏移量设置节点
